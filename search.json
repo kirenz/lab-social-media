@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "requirements.html",
+    "href": "requirements.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nSQL: MySQL, MySQL Workbench and a database called db_data\nPython: Anaconda, Anaconda Environment lab and Visual Studio Code\nEnvironment: A folder on your machine called competitive and an environment file with your MySQL password"
+  },
+  {
+    "objectID": "code/notebook.html",
+    "href": "code/notebook.html",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#setup",
+    "href": "code/notebook.html#setup",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#data",
+    "href": "code/notebook.html#data",
+    "title": "Notebook",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Download the Jupyter Notebooks in your local folder xyz.\n\nTask 1:"
+  },
+  {
+    "objectID": "slide.html",
+    "href": "slide.html",
+    "title": "Slides",
+    "section": "",
+    "text": "The following tutorials are mainly based on “” provided by\nTxt"
+  },
+  {
+    "objectID": "slide.html#txt",
+    "href": "slide.html#txt",
+    "title": "Slides",
+    "section": "1 Txt",
+    "text": "1 Txt\nIn this tutorial, you’ll learn:\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome 👋",
+    "section": "",
+    "text": "Welcome to the lab ““\n\nIn this lab you will …\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you meet all the requirements and have read the lecture slides before you start with the assignments\n\n\nWhat you will learn in this lab:\n\nHow to set up a MySQL database\nUse SQL for data analysis\nMake use of Pandas for data analysis in Python\nUse Altair for data visualization in Python"
+  },
+  {
+    "objectID": "slides/slides.html#text",
+    "href": "slides/slides.html#text",
+    "title": "foo",
+    "section": "Text",
+    "text": "Text\n\na 🤖\n\nabc\n\n\n\n\nb\nc1\n\n📚 Required reading: A & B (2023)\nhttps://arxiv.org/pdf/2303.12712.pdf\n\nRussell & Norvig, 2009"
+  },
+  {
+    "objectID": "slides/slides.html#image",
+    "href": "slides/slides.html#image",
+    "title": "foo",
+    "section": "Image",
+    "text": "Image"
+  },
+  {
+    "objectID": "slides/slides.html#video",
+    "href": "slides/slides.html#video",
+    "title": "foo",
+    "section": "Video",
+    "text": "Video"
+  },
+  {
+    "objectID": "slides/slides.html#a-lot-of-text",
+    "href": "slides/slides.html#a-lot-of-text",
+    "title": "foo",
+    "section": "A lot of text",
+    "text": "A lot of text\nSmaller heading"
+  },
+  {
+    "objectID": "slides/slides.html#background-image",
+    "href": "slides/slides.html#background-image",
+    "title": "foo",
+    "section": "Background image",
+    "text": "Background image\nabc"
+  },
+  {
+    "objectID": "slides/slides.html#code",
+    "href": "slides/slides.html#code",
+    "title": "foo",
+    "section": "Code",
+    "text": "Code\n1print('Hello World')\n2for i in LIST:\n  df[i] = df[i].astype('cat')\n\n1\n\nPrint Hello World, and then,\n\n2\n\ntransform all columns in the LIST element to categorical variables"
+  }
+]
