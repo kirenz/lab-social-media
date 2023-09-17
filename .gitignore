@@ -22,3 +22,4 @@ quiz.txt
 howto.qmd
 /slides/env/*
 /slides/env/
+/_*.local
