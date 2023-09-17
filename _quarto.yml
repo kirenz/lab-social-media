@@ -1,0 +1,42 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  title: "Lab"
+  image: "/images/logo.png"
+  favicon: "/images/logo.png"
+  search:
+    type: overlay  
+  page-footer:
+    left: |
+      © [Jan Kirenz](https://www.kirenz.com/), 2023
+    center:
+      - text: "Slides"
+        href: slide.qmd
+      - text: "Requirements"
+        href: requirements.qmd  
+      - text: "Assignments"
+        href: assignments.qmd
+    right:
+      - icon: person-circle
+        href: https://moodle.hdm-stuttgart.de/login/index.php
+        aria-label: Moodle           
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - slide.qmd
+      - requirements.qmd
+      - assignments.qmd
+
+format:
+  html:
+    toc: true
+    theme:
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css

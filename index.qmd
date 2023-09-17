@@ -1,0 +1,21 @@
+---
+title: "Welcome 👋"
+---
+
+Welcome to the lab *""* 
+
+![](/images/logo.png){width="60%"}
+
+
+In this lab you will ...
+
+::: {.callout-important}
+Make sure you meet all the [requirements](/requirements.qmd) and have read the lecture [slides](/slide.qmd) before you start with the [assignments](/assignments.qmd) 
+:::
+
+What you will learn in this lab:
+
+- How to set up a MySQL database
+- Use SQL for data analysis
+- Make use of Pandas for data analysis in Python
+- Use Altair for data visualization in Python 

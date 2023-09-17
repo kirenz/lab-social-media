@@ -1,0 +1,92 @@
+---
+title: foo
+title-slide-attributes:
+  data-background-image: ../images/logo.png
+  data-background-size: contain
+  data-background-opacity: "0.5"
+lang: en
+subtitle: foo
+author: Jan Kirenz
+execute:
+  eval: false
+  echo: true
+highlight-style: github
+format:
+  revealjs: 
+    toc: true
+    toc-depth: 1
+    embed-resources: false
+    theme: [dark, ../custom.scss]  
+    incremental: true
+    transition: slide
+    background-transition: fade
+    transition-speed: slow
+    code-copy: true
+    code-line-numbers: true
+    smaller: false
+    scrollable: true
+    slide-number: c
+    preview-links: auto
+    chalkboard: 
+      buttons: false
+   # logo: ../images/logo.png
+    footer: Jan Kirenz
+---
+
+# H1 {background-image="../images/logo.png"}
+
+## Text
+
+- a 🤖
+
+  - abc
+
+. . .
+
+- b
+
+- c^[Russell & Norvig, 2009]  
+
+📚 Required reading: [A & B (2023)](link) 
+
+<https://arxiv.org/pdf/2303.12712.pdf> 
+
+## Image
+
+![](../images/hdm.png)
+
+
+
+## Video
+
+{{< video https://www.youtube.com/embed/KpedmJdrTpY width="1920" height="1080">}}
+
+<!-- Video about Protein -->
+
+
+## A lot of text {.smaller}
+
+Smaller heading
+
+## Background image {background-image="../images/hdm.png"}
+
+abc
+
+## Code
+
+```python
+print('Hello World')                             # <1>
+for i in LIST:                                   # <2>
+  df[i] = df[i].astype('cat')                    # <2>
+```
+1. Print Hello World, and then,
+2. transform all columns in the LIST element to categorical variables
+
+# What's next? {background-image="../images/logo.png" background-opacity="0.5"}
+
+- **Congratulations! You have completed this tutorial** 👍
+
+**Next, you may want to go back to the [lab's website](https://kirenz.github.io/foo/)**
+
+
+

@@ -1,0 +1,24 @@
+---
+title: "Slides"
+number-sections: true
+---
+
+*The following tutorials are mainly based on [""]() provided by*
+
+Txt
+
+::: {.callout-note appearance="simple"}
+Take a look at the [slides tutorial](https://kirenz.github.io/lab-toolkit/slides/slides.html#/title-slide) to learn how to use all slide options. 
+
+To download Jupyter Notebooks: Go to the Colab menu and choose "File" > "Download" > "Download .ipynb"
+:::
+
+
+## Txt
+
+In this tutorial, you'll learn:
+
+::: {.callout-tip appearance="simple" icon=false}
+- [🖥️ Presentation]()
+- [💻 Jupyter Notebook]()
+:::

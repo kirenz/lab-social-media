@@ -1,0 +1,13 @@
+---
+title: "Requirements"
+---
+
+To start this lab, you'll need the following environments:
+
+:::{.callout-important}
+Visit the "[Programming Toolkit-webpage](https://kirenz.github.io/lab-toolkit/)" to learn how to meet all requirements.
+:::
+
+- **SQL**: MySQL, MySQL Workbench and a database called `db_data`
+- **Python**: Anaconda, Anaconda Environment `lab` and Visual Studio Code
+- **Environment**: A folder on your machine called *competitive* and an environment file with your MySQL password
