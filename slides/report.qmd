@@ -7,63 +7,172 @@ execute:
   warning: false
 format:
   revealjs: 
-    theme: [dark, custom-design.scss]  
+    theme: simple
+    css: custom-styles.css 
 ---
 
 
 ```{python}
 # | include: False
 
-# Setup
+# Bibliothken importieren
 import pandas as pd
 import altair as alt
 from urllib import request
 import json
+```
 
-alt.renderers.enable('html')
+```{python}
+# | include: False
 
+# Deutsche Formatvorlagen für Altair
 
-# fetch & enable a German format & timeFormat locales.
 with request.urlopen('https://raw.githubusercontent.com/d3/d3-format/master/locale/de-DE.json') as f:
     de_format = json.load(f)
 with request.urlopen('https://raw.githubusercontent.com/d3/d3-time-format/master/locale/de-DE.json') as f:
     de_time_format = json.load(f)
+
 alt.renderers.set_embed_options(
     formatLocale=de_format, timeFormatLocale=de_time_format)
-
-
 ```
 
 
 ```{python}
+# | include: False
+
 # Daten
+
+# Daten importieren
 df = pd.read_csv(
     "https://raw.githubusercontent.com/kirenz/datasets/master/facebook-ad-data.csv", decimal=',')
 
-
-# Funktion für das Ausgabeformat der Pandas-Tabellen
-
-
-def make_pretty(styler):
-    styler.format(precision=0, thousands=".", decimal=",")
-    return styler
-
+# Auswahl der Kampagnen anhand der Id
+KAMPAGNEN = [344, 375]
+df = df[df['Id'].isin(KAMPAGNEN)]
 
 # Daten anpassen
 df['Plattform'] = df['Plattform'].astype('category')
 
 ```
 
-# Erfolgsübersicht
+```{python}
+# Eingabe von Daten aus Meta
+TOTAL_FOLLOWERS = 400000
+NEW_NET_FOLLOWERS = 250
+TOTAL_AUDIENCE = 10000000
+```
+
+```{python}
+# Berechnung einiger Kennzahlen
+
+# AWARENESS KENNZAHLEN
+PUBLIKUMS_WACHSTUMSRATE = (NEW_NET_FOLLOWERS / TOTAL_AUDIENCE) * 100
+POST_REICHWEITE = (df['Reichweite'] / TOTAL_FOLLOWERS) * 100
+
+# ENGAGEMENT KENNZAHLEN
+DURCH_ENGAGEMENT = (df['Beitragsinteraktionen'] / TOTAL_FOLLOWERS) * 100
+AMPLIFIKATION = (df['Geteilte Beiträge'] / TOTAL_FOLLOWERS) * 100
+KONVERSATION = (df['Beitragskommentare'] / TOTAL_FOLLOWERS) * 100
+
+# CONERSION KENNZAHLEN
+CTR = df['CTR (Link-Klickrate)']
+CPC = df['CPC (alle) (EUR)']
+CONVERSION = df['Ergebnisrate']
+TKP = df['Kosten pro 1.000 erreichten Personen (EUR)']
+CPM = df['CPM (Kosten pro 1.000 Impressionen) (EUR)']
+
+```
+
+```{python}
+# Kennzahlen
+
+ALLGEMEIN = ['Reichweite', 'Impressionen', 'Seiteninteraktionen',
 
 
-## Reichweite und Impressionen
+             '„Gefällt mir“-Angaben für Seite', 'Beitragsreaktionen']
 
-. . . 
+PERFORMANCE = ['Ausgegebener Betrag (EUR)', 'Klicks (alle)',
+               'CPC (alle) (EUR)', 'CTR (alle)']
+
+
+
+```
+
+```{python}
+
+# Funktion für das Ausgabeformat der Pandas-Tabellen
+def make_pretty(styler):
+    styler.format(precision=0, thousands=".", decimal=",")
+    return styler
+
+```
+
+# Einführung    
+
+## Kontext
+
+*Aktuelle Situation. Weshalb wurde die Kampagne erstellt?* 
+
+## Kampagnenziele
+
+*Konkrete Ziele der Kampagne (SMART)*
+
+## Zielgruppe
+
+![](../images/user-persona.png)
+
+## Kampagnenüberblick
+
+![](../images/facebook-ad-hello.png)
+
+- Beispiele für Werbeanzeigen, Bilder, Videos oder Texte.
+- Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.
+
+
+
+## Budget und Zeitraum
+
+- Gesamtbudget für die Kampagne.
+- Tägliches Budget oder Budgetverteilung.
+- Zeitraum der Kampagne.
+- Art der Werbeanzeigen (z.B. Video, Bild, Karussell).
+- Platzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte).
+
+# Kampagnen-Erfolgsübersicht
+
+
+## Reichweite
+
+
+```{python}
+df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Kosten pro 1.000 erreichten Personen (EUR)']].sort_values(
+    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+## Impressionen
+
+
+```{python}
+df[['Ausgegebener Betrag (EUR)', 'Impressionen', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].sort_values(
+    by=['Impressionen'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+
+```{python}
+df[['Reichweite', 'Impressionen', 'Seiteninteraktionen', '„Gefällt mir“-Angaben für Seite', 'Beitragsreaktionen']].sort_values(
+    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+
+## Gesamtübersicht
 
 ```{python}
 df.groupby('Plattform')[['Reichweite', 'Impressionen']
                         ].sum().sort_values(by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+
 
 ```
 
