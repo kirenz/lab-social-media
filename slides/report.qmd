@@ -25,8 +25,7 @@ import json
 ```{python}
 # | include: False
 
-# Deutsche Formatvorlagen für Altair
-
+# Deutsche Formatvorlagen für Altair laden
 with request.urlopen('https://raw.githubusercontent.com/d3/d3-format/master/locale/de-DE.json') as f:
     de_format = json.load(f)
 with request.urlopen('https://raw.githubusercontent.com/d3/d3-time-format/master/locale/de-DE.json') as f:
@@ -40,7 +39,7 @@ alt.renderers.set_embed_options(
 ```{python}
 # | include: False
 
-# Daten
+# Daten einlesen und vorbereiten
 
 # Daten importieren
 df = pd.read_csv(
@@ -52,11 +51,10 @@ df = df[df['Id'].isin(KAMPAGNEN)]
 
 # Daten anpassen
 df['Plattform'] = df['Plattform'].astype('category')
-
 ```
 
 ```{python}
-# Eingabe von Daten aus Meta
+# Eingabe von Kennzahlen aus Meta
 TOTAL_FOLLOWERS = 400000
 NEW_NET_FOLLOWERS = 250
 TOTAL_AUDIENCE = 10000000
@@ -83,20 +81,6 @@ CPM = df['CPM (Kosten pro 1.000 Impressionen) (EUR)']
 
 ```
 
-```{python}
-# Kennzahlen
-
-ALLGEMEIN = ['Reichweite', 'Impressionen', 'Seiteninteraktionen',
-
-
-             '„Gefällt mir“-Angaben für Seite', 'Beitragsreaktionen']
-
-PERFORMANCE = ['Ausgegebener Betrag (EUR)', 'Klicks (alle)',
-               'CPC (alle) (EUR)', 'CTR (alle)']
-
-
-
-```
 
 ```{python}
 
@@ -109,7 +93,7 @@ def make_pretty(styler):
 
 # Einführung    
 
-## Kontext
+## Ausgangssituation
 
 *Aktuelle Situation. Weshalb wurde die Kampagne erstellt?* 
 
@@ -125,9 +109,8 @@ def make_pretty(styler):
 
 ![](../images/facebook-ad-hello.png)
 
-- Beispiele für Werbeanzeigen, Bilder, Videos oder Texte.
-- Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.
-
+*Beispiele für Werbeanzeigen, Bilder, Videos oder Texte.*
+*Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.*
 
 
 ## Budget und Zeitraum
@@ -141,30 +124,61 @@ def make_pretty(styler):
 # Kampagnen-Erfolgsübersicht
 
 
-## Reichweite
+## Reichweite und Impressionen {.smaller}
 
 
 ```{python}
-df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Kosten pro 1.000 erreichten Personen (EUR)']].sort_values(
-    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen']].round(
+    0).style.pipe(make_pretty)
 ```
 
 
-## Impressionen
+. . .
 
 
 ```{python}
-df[['Ausgegebener Betrag (EUR)', 'Impressionen', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].sort_values(
-    by=['Impressionen'], ascending=False).round(0).style.pipe(make_pretty)
+df[['Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
+    0).style.pipe(make_pretty)
 ```
 
+
+## Publikums
+
+```{python}
+print(f'Publikums-Wachstumsrate: {PUBLIKUMS_WACHSTUMSRATE:.2%}')
+
+print(f'Post-Reichweite: {POST_REICHWEITE}')
+
+```
 
 
 ```{python}
-df[['Reichweite', 'Impressionen', 'Seiteninteraktionen', '„Gefällt mir“-Angaben für Seite', 'Beitragsreaktionen']].sort_values(
-    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+POST_REICHWEITE
+
 ```
 
+## Durchschnittliche Impressionen
+
+
+```{python}
+
+# chart = alt.Chart(df).mark_bar().encode(
+#     x=alt.X('Reichweite').axis(
+#         title="Kampagnen",
+#         titleAnchor="start"),
+#     y=alt.Y('Id', sort='-x').axis(title=None)
+# ).properties(
+#     width=850,
+#     height=450
+# ).configure_axis(
+#     labelFontSize=16,
+#     titleFontSize=20,
+#     grid=False
+# ).configure_view(strokeOpacity=0)
+
+# chart
+
+```
 
 
 ## Gesamtübersicht
@@ -181,26 +195,26 @@ df.groupby('Plattform')[['Reichweite', 'Impressionen']
 
 ```{python}
 
-df_mean = (
-    df.groupby("Plattform")["Impressionen"].mean().rename(
-        "mean_imp").reset_index()
-)
+# df_mean = (
+#     df.groupby("Plattform")["Impressionen"].mean().rename(
+#         "mean_imp").reset_index()
+# )
 
 
-chart = alt.Chart(df_mean).mark_bar().encode(
-    x=alt.X('mean_imp').axis(
-        title="Durchschnittliche Impressionen",
-        titleAnchor="start"),
-    y=alt.Y('Plattform', sort='-x').axis(title=None)
-).properties(
-    width=850,
-    height=450
-).configure_axis(
-    labelFontSize=16,
-    titleFontSize=20,
-    grid=False
-).configure_view(strokeOpacity=0)
+# chart = alt.Chart(df_mean).mark_bar().encode(
+#     x=alt.X('mean_imp').axis(
+#         title="Durchschnittliche Impressionen",
+#         titleAnchor="start"),
+#     y=alt.Y('Plattform', sort='-x').axis(title=None)
+# ).properties(
+#     width=850,
+#     height=450
+# ).configure_axis(
+#     labelFontSize=16,
+#     titleFontSize=20,
+#     grid=False
+# ).configure_view(strokeOpacity=0)
 
-chart
+# chart
 
 ```
