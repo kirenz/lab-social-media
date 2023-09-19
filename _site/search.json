@@ -4,11 +4,67 @@
     "href": "slides/report.html#reichweite-und-impressionen",
     "title": "Social Media Report",
     "section": "Reichweite und Impressionen",
-    "text": "Reichweite und Impressionen\n\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n60.479.604\n151.379.700\n\n\nAudience Network\n7.507.156\n25.118.879\n\n\nInstagram\n1.454.423\n2.470.227\n\n\nMessenger\n168.974\n254.304\n\n\nNicht kategorisiert\n4\n123"
+    "text": "Reichweite und Impressionen\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\n\n\n\n\n344\n5.670\n293.441\n551.503\n\n\n375\n4.999\n178.373\n414.871\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n19\n10\n\n\n375\n28\n12"
   },
   {
     "objectID": "slides/report.html#durchschnittliche-impressionen",
     "href": "slides/report.html#durchschnittliche-impressionen",
+    "title": "Social Media Report",
+    "section": "Durchschnittliche Impressionen",
+    "text": "Durchschnittliche Impressionen"
+  },
+  {
+    "objectID": "slides/report.html#ausgangssituation",
+    "href": "slides/report.html#ausgangssituation",
+    "title": "Social Media Report",
+    "section": "Ausgangssituation",
+    "text": "Ausgangssituation\nAktuelle Situation. Weshalb wurde die Kampagne erstellt?"
+  },
+  {
+    "objectID": "slides/report.html#kampagnenziele",
+    "href": "slides/report.html#kampagnenziele",
+    "title": "Social Media Report",
+    "section": "Kampagnenziele",
+    "text": "Kampagnenziele\nKonkrete Ziele der Kampagne (SMART)"
+  },
+  {
+    "objectID": "slides/report.html#zielgruppe",
+    "href": "slides/report.html#zielgruppe",
+    "title": "Social Media Report",
+    "section": "Zielgruppe",
+    "text": "Zielgruppe"
+  },
+  {
+    "objectID": "slides/report.html#kampagnenüberblick",
+    "href": "slides/report.html#kampagnenüberblick",
+    "title": "Social Media Report",
+    "section": "Kampagnenüberblick",
+    "text": "Kampagnenüberblick\n\nBeispiele für Werbeanzeigen, Bilder, Videos oder Texte. Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen."
+  },
+  {
+    "objectID": "slides/report.html#budget-und-zeitraum",
+    "href": "slides/report.html#budget-und-zeitraum",
+    "title": "Social Media Report",
+    "section": "Budget und Zeitraum",
+    "text": "Budget und Zeitraum\n\nGesamtbudget für die Kampagne.\nTägliches Budget oder Budgetverteilung.\nZeitraum der Kampagne.\nArt der Werbeanzeigen (z.B. Video, Bild, Karussell).\nPlatzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte)."
+  },
+  {
+    "objectID": "slides/report.html#publikums",
+    "href": "slides/report.html#publikums",
+    "title": "Social Media Report",
+    "section": "Publikums",
+    "text": "Publikums\n\n\nPublikums-Wachstumsrate: 0.25%\nPost-Reichweite: 344    73.36025\n375    44.59325\nName: Reichweite, dtype: float64\n\n\n\n\n344    73.36025\n375    44.59325\nName: Reichweite, dtype: float64"
+  },
+  {
+    "objectID": "slides/report.html#gesamtübersicht",
+    "href": "slides/report.html#gesamtübersicht",
+    "title": "Social Media Report",
+    "section": "Gesamtübersicht",
+    "text": "Gesamtübersicht\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n471.814\n966.374"
+  },
+  {
+    "objectID": "slides/report.html#durchschnittliche-impressionen-1",
+    "href": "slides/report.html#durchschnittliche-impressionen-1",
     "title": "Social Media Report",
     "section": "Durchschnittliche Impressionen",
     "text": "Durchschnittliche Impressionen"
