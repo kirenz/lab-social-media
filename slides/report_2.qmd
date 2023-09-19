@@ -1,0 +1,118 @@
+---
+title: "Social Media Report"
+lang: de
+subtitle: "Winterkampagne 2023"
+execute:
+  echo: false 
+  warning: false
+format:
+  revealjs: 
+    theme: simple
+    css: custom-styles.css 
+---
+
+
+```{python}
+# | include: False
+# Deutsche Formatvorlagen für Altair laden
+
+# Bibliothken importieren
+import my_code.py
+```
+
+# Einführung    
+
+## Ausgangssituation
+
+*Aktuelle Situation. Weshalb wurde die Kampagne erstellt?* 
+
+## Kampagnenziele
+
+*Konkrete Ziele der Kampagne (SMART)*
+
+## Zielgruppe
+
+![](../images/user-persona.png)
+
+## Kampagnenüberblick
+
+![](../images/facebook-ad-hello.png)
+
+*Beispiele für Werbeanzeigen, Bilder, Videos oder Texte.*
+*Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.*
+
+
+## Budget und Zeitraum
+
+- Gesamtbudget für die Kampagne.
+- Tägliches Budget oder Budgetverteilung.
+- Zeitraum der Kampagne.
+- Art der Werbeanzeigen (z.B. Video, Bild, Karussell).
+- Platzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte).
+
+# Kampagnen-Erfolgsübersicht
+
+
+## Reichweite
+
+
+```{python}
+df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Kosten pro 1.000 erreichten Personen (EUR)']].sort_values(
+    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+## Impressionen
+
+
+```{python}
+df[['Ausgegebener Betrag (EUR)', 'Impressionen', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].sort_values(
+    by=['Impressionen'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+
+```{python}
+df[['Reichweite', 'Impressionen', 'Seiteninteraktionen', '„Gefällt mir“-Angaben für Seite', 'Beitragsreaktionen']].sort_values(
+    by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+```
+
+
+
+## Gesamtübersicht
+
+```{python}
+df.groupby('Plattform')[['Reichweite', 'Impressionen']
+                        ].sum().sort_values(by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+
+
+```
+
+## Durchschnittliche Impressionen
+
+
+```{python}
+
+df_mean = (
+    df.groupby("Plattform")["Impressionen"].mean().rename(
+        "mean_imp").reset_index()
+)
+
+
+chart = alt.Chart(df_mean).mark_bar().encode(
+    x=alt.X('mean_imp').axis(
+        title="Durchschnittliche Impressionen",
+        titleAnchor="start"),
+    y=alt.Y('Plattform', sort='-x').axis(title=None)
+).properties(
+    width=850,
+    height=450
+).configure_axis(
+    labelFontSize=16,
+    titleFontSize=20,
+    grid=False
+).configure_view(strokeOpacity=0)
+
+chart
+
+```
