@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Download the Jupyter Notebooks in your local folder xyz.\n\nTask 1:"
-  },
-  {
-    "objectID": "slides/report.html#reichweite-und-impressionen",
-    "href": "slides/report.html#reichweite-und-impressionen",
-    "title": "Social Media Report",
-    "section": "Reichweite und Impressionen",
-    "text": "Reichweite und Impressionen\n\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n60.479.604\n151.379.700\n\n\nAudience Network\n7.507.156\n25.118.879\n\n\nInstagram\n1.454.423\n2.470.227\n\n\nMessenger\n168.974\n254.304\n\n\nNicht kategorisiert\n4\n123"
-  },
-  {
-    "objectID": "slides/report.html#durchschnittliche-impressionen",
-    "href": "slides/report.html#durchschnittliche-impressionen",
-    "title": "Social Media Report",
-    "section": "Durchschnittliche Impressionen",
-    "text": "Durchschnittliche Impressionen"
-  },
-  {
-    "objectID": "requirements.html",
-    "href": "requirements.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nSQL: MySQL, MySQL Workbench and a database called db_data\nPython: Anaconda, Anaconda Environment lab and Visual Studio Code\nEnvironment: A folder on your machine called competitive and an environment file with your MySQL password"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome 👋",
@@ -49,24 +21,94 @@
     "text": "1 Txt\nIn this tutorial, you’ll learn:\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
   },
   {
-    "objectID": "code/notebook.html",
-    "href": "code/notebook.html",
-    "title": "Notebook",
+    "objectID": "requirements.html",
+    "href": "requirements.html",
+    "title": "Requirements",
     "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nSQL: MySQL, MySQL Workbench and a database called db_data\nPython: Anaconda, Anaconda Environment lab and Visual Studio Code\nEnvironment: A folder on your machine called competitive and an environment file with your MySQL password"
   },
   {
-    "objectID": "code/notebook.html#setup",
-    "href": "code/notebook.html#setup",
-    "title": "Notebook",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
     "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+    "text": "Download the Jupyter Notebooks in your local folder xyz.\n\nTask 1:"
   },
   {
-    "objectID": "code/notebook.html#data",
-    "href": "code/notebook.html#data",
-    "title": "Notebook",
-    "section": "Data",
-    "text": "Data"
+    "objectID": "slides/report.html#ausgangssituation",
+    "href": "slides/report.html#ausgangssituation",
+    "title": "Social Media Report",
+    "section": "Ausgangssituation",
+    "text": "Ausgangssituation\nAktuelle Situation. Weshalb wurde die Kampagne erstellt?"
+  },
+  {
+    "objectID": "slides/report.html#kampagnenziele",
+    "href": "slides/report.html#kampagnenziele",
+    "title": "Social Media Report",
+    "section": "Kampagnenziele",
+    "text": "Kampagnenziele\nKonkrete Ziele der Kampagne (SMART)"
+  },
+  {
+    "objectID": "slides/report.html#zielgruppe",
+    "href": "slides/report.html#zielgruppe",
+    "title": "Social Media Report",
+    "section": "Zielgruppe",
+    "text": "Zielgruppe"
+  },
+  {
+    "objectID": "slides/report.html#kampagnenüberblick",
+    "href": "slides/report.html#kampagnenüberblick",
+    "title": "Social Media Report",
+    "section": "Kampagnenüberblick",
+    "text": "Kampagnenüberblick\n\nBeispiele für Werbeanzeigen, Bilder, Videos oder Texte. Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen."
+  },
+  {
+    "objectID": "slides/report.html#budget-und-zeitraum",
+    "href": "slides/report.html#budget-und-zeitraum",
+    "title": "Social Media Report",
+    "section": "Budget und Zeitraum",
+    "text": "Budget und Zeitraum\n\nGesamtbudget für die Kampagne.\nTägliches Budget oder Budgetverteilung.\nZeitraum der Kampagne.\nArt der Werbeanzeigen (z.B. Video, Bild, Karussell).\nPlatzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte)."
+  },
+  {
+    "objectID": "slides/report.html#awareness",
+    "href": "slides/report.html#awareness",
+    "title": "Social Media Report",
+    "section": "Awareness",
+    "text": "Awareness\n\n\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n5.670,00\n293.441\n551.503\n19,00\n10,00\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 73.36%"
+  },
+  {
+    "objectID": "slides/report.html#engagement",
+    "href": "slides/report.html#engagement",
+    "title": "Social Media Report",
+    "section": "Engagement",
+    "text": "Engagement\n\n\n\n\n\n\n\n\n\n \nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n344\n8.548\n132\n57\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.14%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.01%"
+  },
+  {
+    "objectID": "slides/report.html#conversion",
+    "href": "slides/report.html#conversion",
+    "title": "Social Media Report",
+    "section": "Conversion",
+    "text": "Conversion\n\n\n\n\n\n\n\n\n\n \nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%"
+  },
+  {
+    "objectID": "slides/report.html#durchschnittliche-impressionen",
+    "href": "slides/report.html#durchschnittliche-impressionen",
+    "title": "Social Media Report",
+    "section": "Durchschnittliche Impressionen",
+    "text": "Durchschnittliche Impressionen"
+  },
+  {
+    "objectID": "slides/report.html#gesamtübersicht",
+    "href": "slides/report.html#gesamtübersicht",
+    "title": "Social Media Report",
+    "section": "Gesamtübersicht",
+    "text": "Gesamtübersicht\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n293.441\n551.503"
+  },
+  {
+    "objectID": "slides/report.html#durchschnittliche-impressionen-1",
+    "href": "slides/report.html#durchschnittliche-impressionen-1",
+    "title": "Social Media Report",
+    "section": "Durchschnittliche Impressionen",
+    "text": "Durchschnittliche Impressionen"
   }
 ]
