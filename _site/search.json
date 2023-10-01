@@ -4,7 +4,7 @@
     "href": "slides/report.html#reichweite-und-impressionen",
     "title": "Social Media Report",
     "section": "Reichweite und Impressionen",
-    "text": "Reichweite und Impressionen\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\n\n\n\n\n344\n5.670\n293.441\n551.503\n\n\n375\n4.999\n178.373\n414.871\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n19\n10\n\n\n375\n28\n12"
+    "text": "Reichweite und Impressionen\n\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n5.670\n293.441\n551.503\n19\n10"
   },
   {
     "objectID": "slides/report.html#durchschnittliche-impressionen",
@@ -60,7 +60,7 @@
     "href": "slides/report.html#gesamtübersicht",
     "title": "Social Media Report",
     "section": "Gesamtübersicht",
-    "text": "Gesamtübersicht\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n471.814\n966.374"
+    "text": "Gesamtübersicht\n\n\n\n\n\n\n\n \nReichweite\nImpressionen\n\n\nPlattform\n \n \n\n\n\n\nFacebook\n293.441\n551.503"
   },
   {
     "objectID": "slides/report.html#durchschnittliche-impressionen-1",
@@ -68,5 +68,47 @@
     "title": "Social Media Report",
     "section": "Durchschnittliche Impressionen",
     "text": "Durchschnittliche Impressionen"
+  },
+  {
+    "objectID": "slides/report.html#publikums-wachstumsrate",
+    "href": "slides/report.html#publikums-wachstumsrate",
+    "title": "Social Media Report",
+    "section": "Publikums-wachstumsrate",
+    "text": "Publikums-wachstumsrate\n\n\nPublikums-Wachstumsrate: 0.00250%\nPost-Reichweite: 73.36%"
+  },
+  {
+    "objectID": "slides/report.html#publikums-wachstumsrate-und-post-reichweite",
+    "href": "slides/report.html#publikums-wachstumsrate-und-post-reichweite",
+    "title": "Social Media Report",
+    "section": "Publikums-wachstumsrate und Post-Reichweite",
+    "text": "Publikums-wachstumsrate und Post-Reichweite\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\nPost-Reichweite: 73.36%"
+  },
+  {
+    "objectID": "slides/report.html#awareness",
+    "href": "slides/report.html#awareness",
+    "title": "Social Media Report",
+    "section": "Awareness",
+    "text": "Awareness\n\n\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n5.670,00\n293.441\n551.503\n19,00\n10,00\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 73.36%"
+  },
+  {
+    "objectID": "slides/report.html#engagement",
+    "href": "slides/report.html#engagement",
+    "title": "Social Media Report",
+    "section": "Engagement",
+    "text": "Engagement\n\n\n\n\n\n\n\n\n\n \nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n344\n8.548\n132\n57\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.14%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.01%"
+  },
+  {
+    "objectID": "slides/report.html#conversion",
+    "href": "slides/report.html#conversion",
+    "title": "Social Media Report",
+    "section": "Conversion",
+    "text": "Conversion\n\n\n\n\n\n\n\n\n\n \nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%"
+  },
+  {
+    "objectID": "slides/report.html#kennzahlen",
+    "href": "slides/report.html#kennzahlen",
+    "title": "Social Media Report",
+    "section": "Kennzahlen",
+    "text": "Kennzahlen\n\nAwareness\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\nPost-Reichweite: 73.36%\n\n\n\nEngagement\n\n\n\n\n\nDurchschnittliches Engagement: 2.14%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.01%\n\n\n\nConversion\n\n\n\n\n\nCTR: 7.91%\n\n\n\n\n\n\nCPC: 74.20%\n\n\n\n\n\n\nConversion-Rate: 0.01%"
   }
 ]
