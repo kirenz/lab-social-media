@@ -8,6 +8,7 @@ execute:
 format:
   revealjs: 
     theme: simple
+    incremental: true
     css: custom-styles.css 
 ---
 
@@ -45,19 +46,33 @@ alt.renderers.set_embed_options(
 df = pd.read_csv(
     "https://raw.githubusercontent.com/kirenz/datasets/master/facebook-ad-data.csv", decimal=',')
 
-# Auswahl der Kampagne(n) anhand der Id
-KAMPAGNEN = [344]
-df = df[df['Id'].isin(KAMPAGNEN)]
-
 # Daten anpassen
 df['Plattform'] = df['Plattform'].astype('category')
-df['Beitragsinteraktionen'] = df['Beitragsinteraktionen'].astype('int')
-df['Geteilte Beiträge'] = df['Geteilte Beiträge'].astype('int')
-df['Beitragskommentare'] = df['Beitragskommentare'].astype('int')
+df['Beitragsinteraktionen'] = df['Beitragsinteraktionen'].astype('Int64')
+df['Geteilte Beiträge'] = df['Geteilte Beiträge'].astype('Int64')
+df['Beitragskommentare'] = df['Beitragskommentare'].astype('Int64')
+
+
+
+# Kennzahlen auswählen
+KENNZAHLEN = ['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate' ] 
+
+# Auswahl der relevanten Plattform 
+PLATTFORM = 'Facebook'
+df_mean = df.groupby('Plattform')[KENNZAHLEN].mean().reset_index()
+df_mean = df_mean[df_mean['Plattform'] == PLATTFORM ]
 
 # als Prozent anzeigen
 df['CTR (Link-Klickrate)'] = df['CTR (Link-Klickrate)'].map('{:.2%}'.format)
-df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)
+df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)    
+
+# als Prozent anzeigen
+df_mean['CTR (Link-Klickrate)'] = df_mean['CTR (Link-Klickrate)'].map('{:.2%}'.format)
+df_mean['Ergebnisrate'] = df_mean['Ergebnisrate'].map('{:.2%}'.format)    
+
+# Auswahl der Kampagne(n) anhand der Id
+KAMPAGNEN = [344]
+df = df[df['Id'].isin(KAMPAGNEN)]
 
 ```
 
@@ -74,7 +89,6 @@ TOTAL_AUDIENCE = 10000000
 # AWARENESS KENNZAHLEN
 PUBLIKUMS_WACHSTUMSRATE = (NEW_NET_FOLLOWERS / TOTAL_AUDIENCE) 
 POST_REICHWEITE = (df['Reichweite'].sum() / TOTAL_FOLLOWERS) 
-
 
 # ENGAGEMENT KENNZAHLEN
 DURCH_ENGAGEMENT = (df['Beitragsinteraktionen'].sum() / TOTAL_FOLLOWERS) 
@@ -138,6 +152,23 @@ df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000
     0).style.pipe(make_pretty)
 ```
 
+
+
+
+- Durchschnitt aller Kampagnen auf der Plattform:
+
+
+. . .
+
+
+```{python}
+# | label: awareness_mean
+df_mean[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
+    0).style.pipe(make_pretty)
+```
+
+
+
 <br>
 
 . . .
@@ -166,6 +197,22 @@ print(f'Post-Reichweite: {POST_REICHWEITE:.2%}')
 df[['Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
     0).style.pipe(make_pretty)
 ```
+
+
+- Durchschnitt aller Kampagnen auf der Plattform:
+
+
+. . .
+
+
+```{python}
+# | label: engagement_mean
+df_mean[['Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
+    0).style.pipe(make_pretty)
+```
+
+. . .
+
 
 <br>
 
@@ -204,7 +251,18 @@ df[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
 ```
 
 
-## Durchschnittliche Impressionen
+- Durchschnitt aller Kampagnen auf der Plattform:
+
+. . .
+
+```{python}
+# | label: conversion_mean
+df_mean[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
+    2).style.pipe(make_pretty)
+```
+
+
+<!--
 
 
 ```{python}
@@ -228,11 +286,12 @@ df[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
 ```
 
 
-## Gesamtübersicht
+
 
 ```{python}
-df.groupby('Plattform')[['Reichweite', 'Impressionen']
-                        ].sum().sort_values(by=['Reichweite'], ascending=False).round(4).style.pipe(make_pretty)
+
+# df.groupby('Plattform')[['Reichweite', 'Impressionen']
+#                         ].sum().sort_values(by=['Reichweite'], ascending=False).round(4).style.pipe(make_pretty)
 
 
 ```
@@ -265,3 +324,5 @@ df.groupby('Plattform')[['Reichweite', 'Impressionen']
 # chart
 
 ```
+
+-->
