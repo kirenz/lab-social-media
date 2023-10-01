@@ -45,12 +45,20 @@ alt.renderers.set_embed_options(
 df = pd.read_csv(
     "https://raw.githubusercontent.com/kirenz/datasets/master/facebook-ad-data.csv", decimal=',')
 
-# Auswahl der Kampagnen anhand der Id
-KAMPAGNEN = [344, 375]
+# Auswahl der Kampagne(n) anhand der Id
+KAMPAGNEN = [344]
 df = df[df['Id'].isin(KAMPAGNEN)]
 
 # Daten anpassen
 df['Plattform'] = df['Plattform'].astype('category')
+df['Beitragsinteraktionen'] = df['Beitragsinteraktionen'].astype('int')
+df['Geteilte Beiträge'] = df['Geteilte Beiträge'].astype('int')
+df['Beitragskommentare'] = df['Beitragskommentare'].astype('int')
+
+# als Prozent anzeigen
+df['CTR (Link-Klickrate)'] = df['CTR (Link-Klickrate)'].map('{:.2%}'.format)
+df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)
+
 ```
 
 ```{python}
@@ -64,20 +72,14 @@ TOTAL_AUDIENCE = 10000000
 # Berechnung einiger Kennzahlen
 
 # AWARENESS KENNZAHLEN
-PUBLIKUMS_WACHSTUMSRATE = (NEW_NET_FOLLOWERS / TOTAL_AUDIENCE) * 100
-POST_REICHWEITE = (df['Reichweite'] / TOTAL_FOLLOWERS) * 100
+PUBLIKUMS_WACHSTUMSRATE = (NEW_NET_FOLLOWERS / TOTAL_AUDIENCE) 
+POST_REICHWEITE = (df['Reichweite'].sum() / TOTAL_FOLLOWERS) 
+
 
 # ENGAGEMENT KENNZAHLEN
-DURCH_ENGAGEMENT = (df['Beitragsinteraktionen'] / TOTAL_FOLLOWERS) * 100
-AMPLIFIKATION = (df['Geteilte Beiträge'] / TOTAL_FOLLOWERS) * 100
-KONVERSATION = (df['Beitragskommentare'] / TOTAL_FOLLOWERS) * 100
-
-# CONERSION KENNZAHLEN
-CTR = df['CTR (Link-Klickrate)']
-CPC = df['CPC (alle) (EUR)']
-CONVERSION = df['Ergebnisrate']
-TKP = df['Kosten pro 1.000 erreichten Personen (EUR)']
-CPM = df['CPM (Kosten pro 1.000 Impressionen) (EUR)']
+DURCH_ENGAGEMENT = (df['Beitragsinteraktionen'].sum() / TOTAL_FOLLOWERS) 
+AMPLIFIKATION = (df['Geteilte Beiträge'].sum() / TOTAL_FOLLOWERS) 
+KONVERSATION = (df['Beitragskommentare'].sum() / TOTAL_FOLLOWERS)
 
 ```
 
@@ -86,7 +88,7 @@ CPM = df['CPM (Kosten pro 1.000 Impressionen) (EUR)']
 
 # Funktion für das Ausgabeformat der Pandas-Tabellen
 def make_pretty(styler):
-    styler.format(precision=0, thousands=".", decimal=",")
+    styler.format(precision=2, thousands=".", decimal=",")
     return styler
 
 ```
@@ -124,38 +126,83 @@ def make_pretty(styler):
 # Kampagnen-Erfolgsübersicht
 
 
-## Reichweite und Impressionen {.smaller}
+## Awareness {.smaller}
 
-
-```{python}
-df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen']].round(
-    0).style.pipe(make_pretty)
-```
-
+<br>
 
 . . .
 
-
 ```{python}
-df[['Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
+# | label: awareness
+df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
     0).style.pipe(make_pretty)
 ```
 
+<br>
 
-## Publikums
+. . .
 
 ```{python}
-print(f'Publikums-Wachstumsrate: {PUBLIKUMS_WACHSTUMSRATE:.2%}')
+# | label: publikum-wachstum
+print(f'Publikums-Wachstumsrate: {PUBLIKUMS_WACHSTUMSRATE:.5%}')
+```
 
-print(f'Post-Reichweite: {POST_REICHWEITE}')
+. . .
 
+```{python}
+# | label: post-reichweite
+print(f'Post-Reichweite: {POST_REICHWEITE:.2%}')
 ```
 
 
-```{python}
-POST_REICHWEITE
+## Engagement {.smaller}
 
+<br>
+
+. . .
+
+```{python}
+# | label: engagement
+df[['Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
+    0).style.pipe(make_pretty)
 ```
+
+<br>
+
+. . .
+
+```{python}
+# | label: durch-engagement
+print(f'Durchschnittliches Engagement: {DURCH_ENGAGEMENT:.2%}')
+```
+
+. . .
+
+```{python}
+# | label: amplifikations-rate
+print(f'Amplifikations-Rate: {AMPLIFIKATION:.2%}')
+```
+
+. . .
+
+```{python}
+# | label: konversations-rate
+print(f'Konversations-Rate: {KONVERSATION:.2%}')
+```
+
+
+## Conversion {.smaller}
+
+<br>
+
+. . .
+
+```{python}
+# | label: conversion
+df[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
+    2).style.pipe(make_pretty)
+```
+
 
 ## Durchschnittliche Impressionen
 
@@ -185,7 +232,7 @@ POST_REICHWEITE
 
 ```{python}
 df.groupby('Plattform')[['Reichweite', 'Impressionen']
-                        ].sum().sort_values(by=['Reichweite'], ascending=False).round(0).style.pipe(make_pretty)
+                        ].sum().sort_values(by=['Reichweite'], ascending=False).round(4).style.pipe(make_pretty)
 
 
 ```
