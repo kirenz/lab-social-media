@@ -7,9 +7,8 @@ execute:
   warning: false
 format:
   revealjs: 
-    theme: simple
+    theme: [dark, ../custom.scss]  
     incremental: true
-    css: custom-styles.css 
 ---
 
 
@@ -46,33 +45,40 @@ alt.renderers.set_embed_options(
 df = pd.read_csv(
     "https://raw.githubusercontent.com/kirenz/datasets/master/facebook-ad-data.csv", decimal=',')
 
+# Relevante numerische Kennzahlen auswählen
+KENNZAHLEN = ['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate' ] 
+
+# Neue Liste mit allen relevanten Variablen
+VARIABLEN = KENNZAHLEN + ['Plattform', 'Id']
+
+# Auswahl der Variablen
+df = df[VARIABLEN]
+
 # Daten anpassen
 df['Plattform'] = df['Plattform'].astype('category')
-df['Beitragsinteraktionen'] = df['Beitragsinteraktionen'].astype('Int64')
-df['Geteilte Beiträge'] = df['Geteilte Beiträge'].astype('Int64')
-df['Beitragskommentare'] = df['Beitragskommentare'].astype('Int64')
 
+INTEGER = ['Impressionen', 'Reichweite', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare' ]
 
-
-# Kennzahlen auswählen
-KENNZAHLEN = ['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate' ] 
+for i in INTEGER:
+    df[i] = df[i].astype('Int64')
 
 # Auswahl der relevanten Plattform 
 PLATTFORM = 'Facebook'
-df_mean = df.groupby('Plattform')[KENNZAHLEN].mean().reset_index()
+df_mean = df.groupby('Plattform')[KENNZAHLEN].median().reset_index()
 df_mean = df_mean[df_mean['Plattform'] == PLATTFORM ]
+df_mean["Id"] = 'Median' 
 
-# als Prozent anzeigen
-df['CTR (Link-Klickrate)'] = df['CTR (Link-Klickrate)'].map('{:.2%}'.format)
-df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)    
-
-# als Prozent anzeigen
-df_mean['CTR (Link-Klickrate)'] = df_mean['CTR (Link-Klickrate)'].map('{:.2%}'.format)
-df_mean['Ergebnisrate'] = df_mean['Ergebnisrate'].map('{:.2%}'.format)    
 
 # Auswahl der Kampagne(n) anhand der Id
 KAMPAGNEN = [344]
 df = df[df['Id'].isin(KAMPAGNEN)]
+
+# Dataframes zusammenführen
+df = pd.concat([df, df_mean], ignore_index=True)
+
+# Daten als Prozent anzeigen
+df['CTR (Link-Klickrate)'] = df['CTR (Link-Klickrate)'].map('{:.2%}'.format)
+df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)    
 
 ```
 
@@ -102,7 +108,7 @@ KONVERSATION = (df['Beitragskommentare'].sum() / TOTAL_FOLLOWERS)
 
 # Funktion für das Ausgabeformat der Pandas-Tabellen
 def make_pretty(styler):
-    styler.format(precision=2, thousands=".", decimal=",")
+    styler.format(precision=0, thousands=".", decimal=",").hide_index()
     return styler
 
 ```
@@ -148,25 +154,9 @@ def make_pretty(styler):
 
 ```{python}
 # | label: awareness
-df[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
+df[['Id', 'Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
     0).style.pipe(make_pretty)
 ```
-
-
-
-
-- Durchschnitt aller Kampagnen auf der Plattform:
-
-
-. . .
-
-
-```{python}
-# | label: awareness_mean
-df_mean[['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
-    0).style.pipe(make_pretty)
-```
-
 
 
 <br>
@@ -194,27 +184,12 @@ print(f'Post-Reichweite: {POST_REICHWEITE:.2%}')
 
 ```{python}
 # | label: engagement
-df[['Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
+df[['Id', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
     0).style.pipe(make_pretty)
 ```
-
-
-- Durchschnitt aller Kampagnen auf der Plattform:
-
-
-. . .
-
-
-```{python}
-# | label: engagement_mean
-df_mean[['Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
-    0).style.pipe(make_pretty)
-```
-
-. . .
-
 
 <br>
+
 
 . . .
 
@@ -246,20 +221,9 @@ print(f'Konversations-Rate: {KONVERSATION:.2%}')
 
 ```{python}
 # | label: conversion
-df[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
-    2).style.pipe(make_pretty)
+df[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=".", decimal=",").hide_index()
 ```
 
-
-- Durchschnitt aller Kampagnen auf der Plattform:
-
-. . .
-
-```{python}
-# | label: conversion_mean
-df_mean[['CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(
-    2).style.pipe(make_pretty)
-```
 
 
 <!--
