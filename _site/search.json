@@ -88,21 +88,21 @@
     "href": "slides/report.html#awareness",
     "title": "Social Media Report",
     "section": "Awareness",
-    "text": "Awareness\n\n\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n5.670,00\n293.441\n551.503\n19,00\n10,00\n\n\n\n\n\n\nDurchschnitt aller Kampagnen auf der Plattform:\n\n\n\n\n\n\n\n\n\n\n \nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n1\n306,00\n72.955,00\n182.605,00\n5,00\n3,00\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 73.36%"
+    "text": "Awareness\n\n\n\n\n\n\n\n\n\nId\nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n344\n5.670\n293.441\n551.503\n19\n10\n\n\nMedian\n114\n33.089\n43.845\n4\n3\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 81.63%"
   },
   {
     "objectID": "slides/report.html#engagement",
     "href": "slides/report.html#engagement",
     "title": "Social Media Report",
     "section": "Engagement",
-    "text": "Engagement\n\n\n\n\n\n\n\n\n\n \nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n344\n8.548\n132\n57\n\n\n\n\n\n\nDurchschnitt aller Kampagnen auf der Plattform:\n\n…\n\n\n\n\n\n\n\n \nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n1\n4.311,00\n43,00\n36,00\n\n\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.14%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.01%"
+    "text": "Engagement\n\n\n\n\n\n\n\n\n\nId\nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n344\n8.548\n132\n57\n\n\nMedian\n486\n6\n7\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.26%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.02%"
   },
   {
     "objectID": "slides/report.html#conversion",
     "href": "slides/report.html#conversion",
     "title": "Social Media Report",
     "section": "Conversion",
-    "text": "Conversion\n\n\n\n\n\n\n\n\n\n \nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%\n\n\n\n\n\n\nDurchschnitt aller Kampagnen auf der Plattform:\n\n\n\n\n\n\n\n\n\n\n \nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n1\n59.56%\n0,26\n461.66%"
+    "text": "Conversion\n\n\n\n\n\n\n\n\n\nId\nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%\n\n\nMedian\n34.20%\n0,20\n112.96%"
   },
   {
     "objectID": "slides/report.html#kennzahlen",
