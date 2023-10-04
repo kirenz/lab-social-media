@@ -121,13 +121,13 @@ def make_pretty(styler):
 
 ## Kampagnenziele
 
-*Konkrete Ziele der Kampagne (SMART)*
+*Ziele der Kampagne*
 
 ## Zielgruppe
 
 ![](../images/user-persona.png)
 
-## Kampagnenüberblick
+## Kampagnenüberblick {.smaller}
 
 ![](../images/facebook-ad-hello.png)
 
@@ -135,7 +135,7 @@ def make_pretty(styler):
 *Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.*
 
 
-## Budget und Zeitraum
+## Budget und Zeitraum {.smaller}
 
 - Gesamtbudget für die Kampagne.
 - Tägliches Budget oder Budgetverteilung.
@@ -223,70 +223,3 @@ print(f'Konversations-Rate: {KONVERSATION:.2%}')
 # | label: conversion
 df[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=".", decimal=",").hide_index()
 ```
-
-
-
-<!--
-
-
-```{python}
-
-# chart = alt.Chart(df).mark_bar().encode(
-#     x=alt.X('Reichweite').axis(
-#         title="Kampagnen",
-#         titleAnchor="start"),
-#     y=alt.Y('Id', sort='-x').axis(title=None)
-# ).properties(
-#     width=850,
-#     height=450
-# ).configure_axis(
-#     labelFontSize=16,
-#     titleFontSize=20,
-#     grid=False
-# ).configure_view(strokeOpacity=0)
-
-# chart
-
-```
-
-
-
-
-```{python}
-
-# df.groupby('Plattform')[['Reichweite', 'Impressionen']
-#                         ].sum().sort_values(by=['Reichweite'], ascending=False).round(4).style.pipe(make_pretty)
-
-
-```
-
-## Durchschnittliche Impressionen
-
-
-```{python}
-
-# df_mean = (
-#     df.groupby("Plattform")["Impressionen"].mean().rename(
-#         "mean_imp").reset_index()
-# )
-
-
-# chart = alt.Chart(df_mean).mark_bar().encode(
-#     x=alt.X('mean_imp').axis(
-#         title="Durchschnittliche Impressionen",
-#         titleAnchor="start"),
-#     y=alt.Y('Plattform', sort='-x').axis(title=None)
-# ).properties(
-#     width=850,
-#     height=450
-# ).configure_axis(
-#     labelFontSize=16,
-#     titleFontSize=20,
-#     grid=False
-# ).configure_view(strokeOpacity=0)
-
-# chart
-
-```
-
--->
