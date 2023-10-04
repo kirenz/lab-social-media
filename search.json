@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome 👋",
     "section": "",
-    "text": "Welcome to the lab “Social Media Analytics”\nIn this lab you will learn how to create a Social Media Report using Python and other tools.\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you meet all the requirements and have read the lecture slides before you start with the assignments\n\n\nWhat you will learn in this lab:"
+    "text": "Welcome to the lab “Social Media”\nIn this lab you will learn how to create a Social Media Report using Python and other tools.\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you meet all the requirements and have read the lecture slides before you start with the assignments"
   },
   {
     "objectID": "slides/report.html#ausgangssituation",
@@ -74,7 +74,7 @@
     "href": "requirements.html",
     "title": "Requirements",
     "section": "",
-    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nPython: Anaconda, Anaconda Environment lab, Quarto and Visual Studio Code\nEnvironment: A folder on your machine called social-media-report"
+    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nPython: Anaconda, Anaconda Environment lab, Quarto and Visual Studio Code\nEnvironment: A folder on your machine called social-media"
   },
   {
     "objectID": "slide.html",
