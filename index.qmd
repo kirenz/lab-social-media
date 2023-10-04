@@ -2,7 +2,7 @@
 title: "Welcome 👋"
 ---
 
-Welcome to the lab *"Social Media Analytics"* 
+Welcome to the lab *"Social Media"* 
 
 
 In this lab you will learn how to create a Social Media Report using Python and other tools.
@@ -11,6 +11,5 @@ In this lab you will learn how to create a Social Media Report using Python and 
 Make sure you meet all the [requirements](/requirements.qmd) and have read the lecture [slides](/slide.qmd) before you start with the [assignments](/assignments.qmd) 
 :::
 
-What you will learn in this lab:
 
 
