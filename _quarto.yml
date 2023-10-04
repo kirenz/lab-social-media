@@ -5,7 +5,7 @@ execute:
   freeze: auto
 
 website:
-  title: "Social Media Analytics"
+  title: "Social Media"
   image: "/images/logo.png"
   favicon: "/images/logo.png"
   search:
