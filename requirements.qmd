@@ -9,4 +9,4 @@ Visit the "[Programming Toolkit-webpage](https://kirenz.github.io/lab-toolkit/)"
 :::
 
 - **Python**: Anaconda, Anaconda Environment `lab`, Quarto and Visual Studio Code
-- **Environment**: A folder on your machine called *social-media-report* 
+- **Environment**: A folder on your machine called *social-media* 
