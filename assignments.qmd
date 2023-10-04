@@ -2,7 +2,5 @@
 title: "Assignments"
 ---
 
-Download the Jupyter Notebooks in your local folder `xyz`. 
+tbd
 
-
-- [Task 1: ](https://colab.research.google.com/github/kirenz/lab-xyz/blob/main/code/xyz.ipynb)
