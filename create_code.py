@@ -37,6 +37,12 @@ for file_path in folder_path.glob('*.ipynb'):
             cell['source'] = [line.replace('. . .', '')
                               for line in cell['source']]
 
+    # Ersetze "# |" durch "" in allen Zellen
+    for cell in notebook_content['cells']:
+        if cell['cell_type'] == 'code':  
+            cell['source'] = [line for line in cell['source'] if not line.strip().startswith("# |")]
+
+
     # Finden und Entfernen der ersten Markdown-Zelle
     for index, cell in enumerate(notebook_content['cells']):
         if cell['cell_type'] == 'raw':
