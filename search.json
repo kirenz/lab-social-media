@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "tbd"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome 👋",
@@ -63,34 +70,6 @@
     "text": "Conversion\n\n\n\n\n\n\n\n\n\nId\nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%\n\n\nMedian\n34.20%\n0,20\n112.96%"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "tbd"
-  },
-  {
-    "objectID": "requirements.html",
-    "href": "requirements.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nPython: Anaconda, Anaconda Environment lab, Quarto and Visual Studio Code\nEnvironment: A folder on your machine called social-media"
-  },
-  {
-    "objectID": "slide.html",
-    "href": "slide.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Take a look at the slides tutorial to learn how to use all slide options.\nTo download Jupyter Notebooks: Go to the Colab menu and choose “File” &gt; “Download” &gt; “Download .ipynb”"
-  },
-  {
-    "objectID": "slide.html#social-media-report",
-    "href": "slide.html#social-media-report",
-    "title": "Slides",
-    "section": "1 Social Media Report",
-    "text": "1 Social Media Report\nIn this tutorial, you’ll learn how to create a social media report using Python and Quarto (with Reveal JS).\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
-  },
-  {
     "objectID": "code/report.html",
     "href": "code/report.html",
     "title": "Einführung",
@@ -145,5 +124,26 @@
     "title": "Einführung",
     "section": "Engagement",
     "text": "Engagement\n\n\ndf[['Id', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(\n    0).style.pipe(make_pretty)\n\n\n\nprint(f'Durchschnittliches Engagement: {DURCH_ENGAGEMENT:.2%}')\n\n\nprint(f'Amplifikations-Rate: {AMPLIFIKATION:.2%}')\n\n\nprint(f'Konversations-Rate: {KONVERSATION:.2%}')\n\n\ndf[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=\".\", decimal=\",\").hide_index()"
+  },
+  {
+    "objectID": "requirements.html",
+    "href": "requirements.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nPython: Anaconda, Anaconda Environment lab, Quarto and Visual Studio Code\nEnvironment: A folder on your machine called social-media"
+  },
+  {
+    "objectID": "slide.html",
+    "href": "slide.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Take a look at the slides tutorial to learn how to use all slide options.\nTo download Jupyter Notebooks: Go to the Colab menu and choose “File” &gt; “Download” &gt; “Download .ipynb”"
+  },
+  {
+    "objectID": "slide.html#social-media-report",
+    "href": "slide.html#social-media-report",
+    "title": "Slides",
+    "section": "1 Social Media Report",
+    "text": "1 Social Media Report\nIn this tutorial, you’ll learn how to create a social media report using Python and Quarto (with Reveal JS).\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
   }
 ]
