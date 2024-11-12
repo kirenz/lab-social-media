@@ -17,22 +17,8 @@ format:
 
 # Bibliothken importieren
 import pandas as pd
-import altair as alt
 from urllib import request
 import json
-```
-
-```{python}
-# | include: False
-
-# Deutsche Formatvorlagen für Altair laden
-with request.urlopen('https://raw.githubusercontent.com/d3/d3-format/master/locale/de-DE.json') as f:
-    de_format = json.load(f)
-with request.urlopen('https://raw.githubusercontent.com/d3/d3-time-format/master/locale/de-DE.json') as f:
-    de_time_format = json.load(f)
-
-alt.renderers.set_embed_options(
-    formatLocale=de_format, timeFormatLocale=de_time_format)
 ```
 
 
@@ -105,7 +91,6 @@ KONVERSATION = (df['Beitragskommentare'].sum() / TOTAL_FOLLOWERS)
 
 
 ```{python}
-
 # Funktion für das Ausgabeformat der Pandas-Tabellen
 def make_pretty(styler):
     styler.format(precision=0, thousands=".", decimal=",")
