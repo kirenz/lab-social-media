@@ -1,0 +1,225 @@
+---
+title: "Social Media Report"
+lang: de
+subtitle: "Winterkampagne 2024"
+execute:
+  echo: false 
+  warning: false
+format:
+  revealjs: 
+    theme: [dark, ../custom.scss]  
+    incremental: true
+---
+
+
+```{python}
+# | include: False
+
+# Bibliothken importieren
+import pandas as pd
+import altair as alt
+from urllib import request
+import json
+```
+
+```{python}
+# | include: False
+
+# Deutsche Formatvorlagen für Altair laden
+with request.urlopen('https://raw.githubusercontent.com/d3/d3-format/master/locale/de-DE.json') as f:
+    de_format = json.load(f)
+with request.urlopen('https://raw.githubusercontent.com/d3/d3-time-format/master/locale/de-DE.json') as f:
+    de_time_format = json.load(f)
+
+alt.renderers.set_embed_options(
+    formatLocale=de_format, timeFormatLocale=de_time_format)
+```
+
+
+```{python}
+# | include: False
+
+# Daten einlesen und vorbereiten
+
+# Daten importieren
+df = pd.read_csv(
+    "https://raw.githubusercontent.com/kirenz/datasets/master/facebook-ad-data.csv", decimal=',')
+
+# Relevante numerische Kennzahlen auswählen
+KENNZAHLEN = ['Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate' ] 
+
+# Neue Liste mit allen relevanten Variablen
+VARIABLEN = KENNZAHLEN + ['Plattform', 'Id']
+
+# Auswahl der Variablen
+df = df[VARIABLEN]
+
+# Daten anpassen
+df['Plattform'] = df['Plattform'].astype('category')
+
+INTEGER = ['Impressionen', 'Reichweite', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare' ]
+
+for i in INTEGER:
+    df[i] = df[i].astype('Int64')
+
+# Auswahl der relevanten Plattform 
+PLATTFORM = 'Facebook'
+df_mean = df.groupby('Plattform')[KENNZAHLEN].median().reset_index()
+df_mean = df_mean[df_mean['Plattform'] == PLATTFORM ]
+df_mean["Id"] = 'Median' 
+
+
+# Auswahl der Kampagne(n) anhand der Id
+KAMPAGNEN = [344]
+df = df[df['Id'].isin(KAMPAGNEN)]
+
+# Dataframes zusammenführen
+df = pd.concat([df, df_mean], ignore_index=True)
+
+# Daten als Prozent anzeigen
+df['CTR (Link-Klickrate)'] = df['CTR (Link-Klickrate)'].map('{:.2%}'.format)
+df['Ergebnisrate'] = df['Ergebnisrate'].map('{:.2%}'.format)    
+
+```
+
+```{python}
+# Eingabe von Kennzahlen aus Meta
+TOTAL_FOLLOWERS = 400000
+NEW_NET_FOLLOWERS = 250
+TOTAL_AUDIENCE = 10000000
+```
+
+```{python}
+# Berechnung einiger Kennzahlen
+
+# AWARENESS KENNZAHLEN
+PUBLIKUMS_WACHSTUMSRATE = (NEW_NET_FOLLOWERS / TOTAL_AUDIENCE) 
+POST_REICHWEITE = (df['Reichweite'].sum() / TOTAL_FOLLOWERS) 
+
+# ENGAGEMENT KENNZAHLEN
+DURCH_ENGAGEMENT = (df['Beitragsinteraktionen'].sum() / TOTAL_FOLLOWERS) 
+AMPLIFIKATION = (df['Geteilte Beiträge'].sum() / TOTAL_FOLLOWERS) 
+KONVERSATION = (df['Beitragskommentare'].sum() / TOTAL_FOLLOWERS)
+
+```
+
+
+```{python}
+
+# Funktion für das Ausgabeformat der Pandas-Tabellen
+def make_pretty(styler):
+    styler.format(precision=0, thousands=".", decimal=",")
+    return styler
+
+```
+
+# Einführung    
+
+## Ausgangssituation
+
+*Aktuelle Situation. Weshalb wurde die Kampagne erstellt?* 
+
+## Kampagnenziele
+
+*Ziele der Kampagne*
+
+## Zielgruppe
+
+![](../images/user-persona.png)
+
+## Kampagnenüberblick {.smaller}
+
+![](../images/facebook-ad-hello.png)
+
+*Beispiele für Werbeanzeigen, Bilder, Videos oder Texte.*
+*Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen.*
+
+
+## Budget und Zeitraum {.smaller}
+
+- Gesamtbudget für die Kampagne.
+- Tägliches Budget oder Budgetverteilung.
+- Zeitraum der Kampagne.
+- Art der Werbeanzeigen (z.B. Video, Bild, Karussell).
+- Platzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte).
+
+# Kampagnen-Erfolgsübersicht
+
+
+## Awareness {.smaller}
+
+<br>
+
+. . .
+
+```{python}
+# | label: awareness
+df[['Id', 'Ausgegebener Betrag (EUR)', 'Reichweite', 'Impressionen', 'Kosten pro 1.000 erreichten Personen (EUR)', 'CPM (Kosten pro 1.000 Impressionen) (EUR)']].round(
+    0).style.pipe(make_pretty)
+```
+
+
+<br>
+
+. . .
+
+```{python}
+# | label: publikum-wachstum
+print(f'Publikums-Wachstumsrate: {PUBLIKUMS_WACHSTUMSRATE:.5%}')
+```
+
+. . .
+
+```{python}
+# | label: post-reichweite
+print(f'Post-Reichweite: {POST_REICHWEITE:.2%}')
+```
+
+
+## Engagement {.smaller}
+
+<br>
+
+. . .
+
+```{python}
+# | label: engagement
+df[['Id', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(
+    0).style.pipe(make_pretty)
+```
+
+<br>
+
+
+. . .
+
+```{python}
+# | label: durch-engagement
+print(f'Durchschnittliches Engagement: {DURCH_ENGAGEMENT:.2%}')
+```
+
+. . .
+
+```{python}
+# | label: amplifikations-rate
+print(f'Amplifikations-Rate: {AMPLIFIKATION:.2%}')
+```
+
+. . .
+
+```{python}
+# | label: konversations-rate
+print(f'Konversations-Rate: {KONVERSATION:.2%}')
+```
+
+
+## Conversion {.smaller}
+
+<br>
+
+. . .
+
+```{python}
+# | label: conversion
+df[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=".", decimal=",").hide(axis='index')
+```
