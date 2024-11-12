@@ -1,87 +1,59 @@
 [
   {
-    "objectID": "slides/report-old.html#ausgangssituation",
-    "href": "slides/report-old.html#ausgangssituation",
+    "objectID": "slides/report.html#ausgangssituation",
+    "href": "slides/report.html#ausgangssituation",
     "title": "Social Media Report",
     "section": "Ausgangssituation",
     "text": "Ausgangssituation\nAktuelle Situation. Weshalb wurde die Kampagne erstellt?"
   },
   {
-    "objectID": "slides/report-old.html#kampagnenziele",
-    "href": "slides/report-old.html#kampagnenziele",
+    "objectID": "slides/report.html#kampagnenziele",
+    "href": "slides/report.html#kampagnenziele",
     "title": "Social Media Report",
     "section": "Kampagnenziele",
     "text": "Kampagnenziele\nZiele der Kampagne"
   },
   {
-    "objectID": "slides/report-old.html#zielgruppe",
-    "href": "slides/report-old.html#zielgruppe",
+    "objectID": "slides/report.html#zielgruppe",
+    "href": "slides/report.html#zielgruppe",
     "title": "Social Media Report",
     "section": "Zielgruppe",
     "text": "Zielgruppe"
   },
   {
-    "objectID": "slides/report-old.html#kampagnenüberblick",
-    "href": "slides/report-old.html#kampagnenüberblick",
+    "objectID": "slides/report.html#kampagnenüberblick",
+    "href": "slides/report.html#kampagnenüberblick",
     "title": "Social Media Report",
     "section": "Kampagnenüberblick",
     "text": "Kampagnenüberblick\n\nBeispiele für Werbeanzeigen, Bilder, Videos oder Texte. Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen."
   },
   {
-    "objectID": "slides/report-old.html#budget-und-zeitraum",
-    "href": "slides/report-old.html#budget-und-zeitraum",
+    "objectID": "slides/report.html#budget-und-zeitraum",
+    "href": "slides/report.html#budget-und-zeitraum",
     "title": "Social Media Report",
     "section": "Budget und Zeitraum",
     "text": "Budget und Zeitraum\n\nGesamtbudget für die Kampagne.\nTägliches Budget oder Budgetverteilung.\nZeitraum der Kampagne.\nArt der Werbeanzeigen (z.B. Video, Bild, Karussell).\nPlatzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte)."
   },
   {
-    "objectID": "slides/report-old.html#awareness",
-    "href": "slides/report-old.html#awareness",
+    "objectID": "slides/report.html#awareness",
+    "href": "slides/report.html#awareness",
     "title": "Social Media Report",
     "section": "Awareness",
     "text": "Awareness\n\n\n\n\n\n\n\n\n\n \nId\nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n0\n344\n5.670\n293.441\n551.503\n19\n10\n\n\n1\nMedian\n114\n33.089\n43.845\n4\n3\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 81.63%"
   },
   {
-    "objectID": "slides/report-old.html#engagement",
-    "href": "slides/report-old.html#engagement",
+    "objectID": "slides/report.html#engagement",
+    "href": "slides/report.html#engagement",
     "title": "Social Media Report",
     "section": "Engagement",
     "text": "Engagement\n\n\n\n\n\n\n\n\n\n \nId\nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n0\n344\n8.548\n132\n57\n\n\n1\nMedian\n486\n6\n7\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.26%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.02%"
   },
   {
-    "objectID": "slides/report-old.html#conversion",
-    "href": "slides/report-old.html#conversion",
+    "objectID": "slides/report.html#conversion",
+    "href": "slides/report.html#conversion",
     "title": "Social Media Report",
     "section": "Conversion",
     "text": "Conversion\n\n\n\n\n\n\n\n\n\nId\nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%\n\n\nMedian\n34.20%\n0,20\n112.96%"
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "tbd"
-  },
-  {
-    "objectID": "requirements.html",
-    "href": "requirements.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "To start this lab, you’ll need the following environments:\n\n\n\n\n\n\nImportant\n\n\n\nVisit the “Programming Toolkit-webpage” to learn how to meet all requirements.\n\n\n\nPython: Anaconda, Anaconda Environment lab, Quarto and Visual Studio Code\nEnvironment: A folder on your machine called social-media"
-  },
-  {
-    "objectID": "slide.html",
-    "href": "slide.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Take a look at the slides tutorial to learn how to use all slide options.\nTo download Jupyter Notebooks: Go to the Colab menu and choose “File” &gt; “Download” &gt; “Download .ipynb”"
-  },
-  {
-    "objectID": "slide.html#social-media-report",
-    "href": "slide.html#social-media-report",
-    "title": "Slides",
-    "section": "1 Social Media Report",
-    "text": "1 Social Media Report\nIn this tutorial, you’ll learn how to create a social media report using Python and Quarto (with Reveal JS).\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
   },
   {
     "objectID": "code/report.html",
@@ -140,66 +112,24 @@
     "text": "Engagement\n\n\ndf[['Id', 'Beitragsinteraktionen', 'Geteilte Beiträge', 'Beitragskommentare']].round(\n    0).style.pipe(make_pretty)\n\n\n\nprint(f'Durchschnittliches Engagement: {DURCH_ENGAGEMENT:.2%}')\n\n\nprint(f'Amplifikations-Rate: {AMPLIFIKATION:.2%}')\n\n\nprint(f'Konversations-Rate: {KONVERSATION:.2%}')\n\n\ndf[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=\".\", decimal=\",\").hide_index()"
   },
   {
+    "objectID": "slide.html",
+    "href": "slide.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Take a look at the slides tutorial to learn how to use all slide options.\nTo download Jupyter Notebooks: Go to the Colab menu and choose “File” &gt; “Download” &gt; “Download .ipynb”"
+  },
+  {
+    "objectID": "slide.html#social-media-report",
+    "href": "slide.html#social-media-report",
+    "title": "Slides",
+    "section": "1 Social Media Report",
+    "text": "1 Social Media Report\nIn this tutorial, you’ll learn how to create a social media report using Python and Quarto (with Reveal JS).\n\n\n\n\n\n\n\n🖥️ Presentation\n💻 Jupyter Notebook"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome 👋",
     "section": "",
-    "text": "Welcome to the lab “Social Media”\nIn this lab you will learn how to create a Social Media Report using Python and other tools.\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you meet all the requirements and have read the lecture slides before you start with the assignments"
-  },
-  {
-    "objectID": "slides/report.html#ausgangssituation",
-    "href": "slides/report.html#ausgangssituation",
-    "title": "Social Media Report",
-    "section": "Ausgangssituation",
-    "text": "Ausgangssituation\nAktuelle Situation. Weshalb wurde die Kampagne erstellt?"
-  },
-  {
-    "objectID": "slides/report.html#kampagnenziele",
-    "href": "slides/report.html#kampagnenziele",
-    "title": "Social Media Report",
-    "section": "Kampagnenziele",
-    "text": "Kampagnenziele\nZiele der Kampagne"
-  },
-  {
-    "objectID": "slides/report.html#zielgruppe",
-    "href": "slides/report.html#zielgruppe",
-    "title": "Social Media Report",
-    "section": "Zielgruppe",
-    "text": "Zielgruppe"
-  },
-  {
-    "objectID": "slides/report.html#kampagnenüberblick",
-    "href": "slides/report.html#kampagnenüberblick",
-    "title": "Social Media Report",
-    "section": "Kampagnenüberblick",
-    "text": "Kampagnenüberblick\n\nBeispiele für Werbeanzeigen, Bilder, Videos oder Texte. Erklärung, warum diese Inhalte ausgewählt wurden und wie sie zur Zielgruppe passen."
-  },
-  {
-    "objectID": "slides/report.html#budget-und-zeitraum",
-    "href": "slides/report.html#budget-und-zeitraum",
-    "title": "Social Media Report",
-    "section": "Budget und Zeitraum",
-    "text": "Budget und Zeitraum\n\nGesamtbudget für die Kampagne.\nTägliches Budget oder Budgetverteilung.\nZeitraum der Kampagne.\nArt der Werbeanzeigen (z.B. Video, Bild, Karussell).\nPlatzierung der Anzeigen (z.B. News Feed, Stories, rechte Spalte)."
-  },
-  {
-    "objectID": "slides/report.html#awareness",
-    "href": "slides/report.html#awareness",
-    "title": "Social Media Report",
-    "section": "Awareness",
-    "text": "Awareness\n\n\n\n\n\n\n\n\n\n \nId\nAusgegebener Betrag (EUR)\nReichweite\nImpressionen\nKosten pro 1.000 erreichten Personen (EUR)\nCPM (Kosten pro 1.000 Impressionen) (EUR)\n\n\n\n\n0\n344\n5.670\n293.441\n551.503\n19\n10\n\n\n1\nMedian\n114\n33.089\n43.845\n4\n3\n\n\n\n\n\n\n\n\n\n\nPublikums-Wachstumsrate: 0.00250%\n\n\n\n\n\n\nPost-Reichweite: 81.63%"
-  },
-  {
-    "objectID": "slides/report.html#engagement",
-    "href": "slides/report.html#engagement",
-    "title": "Social Media Report",
-    "section": "Engagement",
-    "text": "Engagement\n\n\n\n\n\n\n\n\n\n \nId\nBeitragsinteraktionen\nGeteilte Beiträge\nBeitragskommentare\n\n\n\n\n0\n344\n8.548\n132\n57\n\n\n1\nMedian\n486\n6\n7\n\n\n\n\n\n\n\n\n\n\nDurchschnittliches Engagement: 2.26%\n\n\n\n\n\n\nAmplifikations-Rate: 0.03%\n\n\n\n\n\n\nKonversations-Rate: 0.02%"
-  },
-  {
-    "objectID": "slides/report.html#conversion",
-    "href": "slides/report.html#conversion",
-    "title": "Social Media Report",
-    "section": "Conversion",
-    "text": "Conversion\n\n\n\n\n\n\n\n\n\nId\nCTR (Link-Klickrate)\nCPC (alle) (EUR)\nErgebnisrate\n\n\n\n\n344\n7.91%\n0,74\n93.82%\n\n\nMedian\n34.20%\n0,20\n112.96%"
+    "text": "Welcome to the lab “Social Media”\nIn this lab you will learn how to create a Social Media Report using Python and other tools."
   }
 ]
