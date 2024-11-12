@@ -7,9 +7,5 @@ Welcome to the lab *"Social Media"*
 
 In this lab you will learn how to create a Social Media Report using Python and other tools.
 
-::: {.callout-important}
-Make sure you meet all the [requirements](/requirements.qmd) and have read the lecture [slides](/slide.qmd) before you start with the [assignments](/assignments.qmd) 
-:::
-
 
 

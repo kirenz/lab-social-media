@@ -12,14 +12,11 @@ website:
     type: overlay  
   page-footer:
     left: |
-      © [Jan Kirenz](https://www.kirenz.com/), 2023
+      © [Jan Kirenz](https://www.kirenz.com/), 2024
     center:
       - text: "Slides"
         href: slide.qmd
-      - text: "Requirements"
-        href: requirements.qmd  
-      - text: "Assignments"
-        href: assignments.qmd
+
     right:
       - icon: person-circle
         href: https://moodle.hdm-stuttgart.de/login/index.php
@@ -29,8 +26,7 @@ website:
       - href: index.qmd
         text: Home
       - slide.qmd
-      - requirements.qmd
-      - assignments.qmd
+
 
 format:
   html:
