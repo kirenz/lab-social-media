@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kirenz.github.io/lab-social-media/slides/report.html</loc>
-    <lastmod>2024-11-12T20:41:16.239Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kirenz.github.io/lab-social-media/index.html</loc>
-    <lastmod>2024-11-12T20:41:16.239Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kirenz.github.io/lab-social-media/code/report.html</loc>
-    <lastmod>2024-11-12T20:41:16.235Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kirenz.github.io/lab-social-media/slide.html</loc>
-    <lastmod>2024-11-12T20:41:16.239Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kirenz.github.io/lab-social-media/requirements.html</loc>
-    <lastmod>2024-11-12T20:41:16.239Z</lastmod>
+    <loc>https://kirenz.github.io/lab-social-media/slides/report-old.html</loc>
+    <lastmod>2024-11-12T20:50:06.217Z</lastmod>
   </url>
   <url>
     <loc>https://kirenz.github.io/lab-social-media/assignments.html</loc>
-    <lastmod>2024-11-12T20:41:16.235Z</lastmod>
+    <lastmod>2024-11-12T20:50:06.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kirenz.github.io/lab-social-media/requirements.html</loc>
+    <lastmod>2024-11-12T20:50:06.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kirenz.github.io/lab-social-media/slide.html</loc>
+    <lastmod>2024-11-12T20:50:06.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kirenz.github.io/lab-social-media/code/report.html</loc>
+    <lastmod>2024-11-12T20:50:06.209Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kirenz.github.io/lab-social-media/index.html</loc>
+    <lastmod>2024-11-12T20:50:06.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kirenz.github.io/lab-social-media/slides/report.html</loc>
+    <lastmod>2024-11-12T20:50:06.217Z</lastmod>
   </url>
 </urlset>
