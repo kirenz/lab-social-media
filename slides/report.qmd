@@ -1,7 +1,7 @@
 ---
 title: "Social Media Report"
 lang: de
-subtitle: "Winterkampagne 2023"
+subtitle: "Winterkampagne 2024"
 execute:
   echo: false 
   warning: false
@@ -108,7 +108,7 @@ KONVERSATION = (df['Beitragskommentare'].sum() / TOTAL_FOLLOWERS)
 
 # Funktion für das Ausgabeformat der Pandas-Tabellen
 def make_pretty(styler):
-    styler.format(precision=0, thousands=".", decimal=",").hide_index()
+    styler.format(precision=0, thousands=".", decimal=",")
     return styler
 
 ```
@@ -221,5 +221,5 @@ print(f'Konversations-Rate: {KONVERSATION:.2%}')
 
 ```{python}
 # | label: conversion
-df[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=".", decimal=",").hide_index()
+df[['Id', 'CTR (Link-Klickrate)', 'CPC (alle) (EUR)', 'Ergebnisrate']].round(2).style.format(precision=2, thousands=".", decimal=",").hide(axis='index')
 ```
