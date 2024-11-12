@@ -1,1 +1,1 @@
-Sitemap: https://github.com/kirenz/lab-social-media/sitemap.xml
+Sitemap: https://kirenz.github.io/lab-social-media/sitemap.xml
